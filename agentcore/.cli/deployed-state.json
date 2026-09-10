@@ -1,3 +1,35 @@
 {
-  "targets": {}
+  "targets": {
+    "default": {
+      "resources": {
+        "runtimes": {
+          "CustomerSupport": {
+            "runtimeId": "CustomerSupport_CustomerSupport-bKw1Es4DP5",
+            "runtimeArn": "arn:aws:bedrock-agentcore:us-west-2:937451425774:runtime/CustomerSupport_CustomerSupport-bKw1Es4DP5",
+            "roleArn": "arn:aws:iam::937451425774:role/AgentCore-CustomerSupport-ApplicationAgentCustomerS-NbujKIhLeZCY"
+          }
+        },
+        "memories": {
+          "SharedMemory": {
+            "memoryId": "CustomerSupport_SharedMemory-XgRJqKAHgp",
+            "memoryArn": "arn:aws:bedrock-agentcore:us-west-2:937451425774:memory/CustomerSupport_SharedMemory-XgRJqKAHgp"
+          }
+        },
+        "gateways": {
+          "my-gateway": {
+            "gatewayId": "customersupport-my-gateway-hwbsy0sfoj",
+            "gatewayArn": "arn:aws:bedrock-agentcore:us-west-2:937451425774:gateway/customersupport-my-gateway-hwbsy0sfoj",
+            "gatewayUrl": "https://customersupport-my-gateway-hwbsy0sfoj.gateway.bedrock-agentcore.us-west-2.amazonaws.com",
+            "targets": {
+              "WarrantyCheck": {
+                "targetId": "H7HSZODEIA"
+              }
+            }
+          }
+        },
+        "stackName": "AgentCore-CustomerSupport-default",
+        "deployHash": "265756137320ef72"
+      }
+    }
+  }
 }
